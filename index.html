@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Government Foundations</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+<style>
+    .img-container {
+        display: table-cell;
+    }
+    .background {
+        color: white;
+        background: #2b3e50 repeat;
+        font-family:'Rubik', sans-serif;
+    }
+    .navbar-default {
+        border: none;
+    }
+    .navbar-default .container-fluid {
+        background-color: #555555;
+    }
+     .custom-well{
+        background-color: #222222;
+    }
+   .pager > li > .pager-button, .pagination-custom >li>.pager-button {
+        background-color: #df691a;
+       color: white;
+       border: none;
+    }
+    .pager > li > a.pager-button:focus, .pager > li > a.pager-button:active,.pager > li > a.pager-button:hover {
+        background-color: #df691a;
+    }
+    #well > div {
+        float: left;
+    }
+    .active-table {
+        background-color: #5bc0de;
+    }
+    @media only screen and (max-width : 450px) {
+        .stick-bottom {
+            width: 100%;
+            height: 60px;
+        }
+        .pagination-custom{
+            margin: 0;
+            margin-top: 20px;
+            height: 100%;
+            display: inline-block;
+            border-radius: 4px;
+            width: 100%;
+            padding: 0;
+        }
+
+        .pagination-custom > li {
+            display: inline;
+            width: 25%;
+        }
+        .pagination-custom > li > a,
+        .pagination-custom > li > span {
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 25%;
+            color: #337ab7;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            text-align: center;
+            line-height: 60px;
+        }
+        .pagination-custom > li:first-child > a,
+        .pagination-custom > li:first-child > span {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        .pagination-custom > li:last-child > a,
+        .pagination-custom > li:last-child > span {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+</style>
+</head>
+<body class="background">
+
+    <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+
+            <h3 class="hidden-sm hidden-xs">Lesson 1: Government Foundations Assignment</h3>
+            <h1 class="hidden-lg hidden-md">Lesson 1: </h1>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+    <header class="page-header">
+
+    <h1>Creating Your Own Government</h1>
+
+    </header>
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="previous"><a class="pager-button"><span aria-hidden="true">&larr;</span> Previous</a></li>
+                <li class="next"><a class=" pager-button">Next <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+        <main class="row">
+            <div id="well">
+
+            </div>
+
+        </main>
+
+
+        <footer class="navbar stick-bottom">
+
+                <ul class="pagination-custom">
+
+                    <li><a class="pager-button" onclick="setWellContents(scenePage)">Scene</a></li>
+                    <li><a class="pager-button" onclick="setWellContents(instructionsPage)">Instructions</a></li>
+                    <li><a class="pager-button" onclick="setWellContents(outlinePage)">Outline</a></li>
+                    <li><a class="pager-button" onclick="setWellContents(rubricPage)">Rubric</a></li>
+
+                </ul>
+
+        </footer>
+    </div>
+
+
+
+</body>
+
+<script>
+    var navNum = 0;
+    var scenePage = '<div class="col-sm-8 custom-well"><h4>Setting the Scene</h4><p>Imagine you are on a cruise and there is an emergency landing. All the crew members and most of the vacationers perish.You and 50 people survive and are able to land on a deserted island. A map grabbed by one of the vacationers indicates that you are in the Marshall Islands.Very little remains from the cruise ship. Human beings have never inhabited this island. A day after landing, a fresh water source was discovered.There is no means of communication with the outside world.You are the leader over this group of people but they will <b>not</b> permit you to be a monarchy setting up a form of government know as an autocracy.</p></div><div class="col-sm-4 hidden-xs  img-container"> <img src="images/island.jpg"> </div>';
+    var instructionsPage = "<div class='col-sm-12 custom-well'><h4>Instructions</h4><p>Create a Google Slide presentation depicting what life is like on this island, including a detailed plan of the government you establish to facilitate the survival of everyone. The presentation should be 12 slides. A slide outline and grading rubric have been provider to guide your work.</p></div>";
+    var outlinePage = "<div class='col-sm-12 custom-well'><h4>Slide Outline</h4> <ol> <li>Title Slide: Your name and the name of your island.</li> <li>Slides 2-3: Depict life on the island and available resources.</li> <li>Slides 4-12: Describe the government you establish.</li> </ol> <h4>Your slides should address ALL of the following:</h4> <ul> <li>How is the government organized? Who is in charge?</li> <li>What is the purpose of the government?</li> <li>What services will the government provide?</li> <li>What rules or laws, if any, are established by your government?</li> <li>Who holds power in this government? Are there branches of power?</li> <li>What rights are established by the government?</li> <li>What happens if these rights are violated? Who determines the consequences?</li> <li>What roles, responsibilities, and expectations exist for the citizens governed by the government you establish?</li> <li>How are decisions made by the government?</li> <li></li> </ul> <h4>Your presentation should:</h4> <ul> <li>Properly cite all outside sources you used.</li> <li>Use your own words. Use academic language not slang language.</li> <li>Use bullet points instead of paragraphs.</li> <li>Use proper spelling, grammar, punctuation, etc.</li> <li>Each slide should contain a graphic permissible under copyright law.</li> </ul></div>";
+    var rubricPage = '<div class="col-sm-12 custom-well"><h4>Rubric</h4><table class="table table-bordered table-responsive" style="font-size: 10px;"><thead><tr><th>Points</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr class="row-1" data-row-points="0"><th scope="row">Length</th><td rowspan="6" data-points="0" id="fail">Does not complete assignment.</td><td data-points="1">Slides are missing most required items. Slide show contains 1-2 slides.</td><td data-points="2">Only 1/4 info on slides. Slide show contains 1/4 required slides.</td><td data-points="3">Only 1/2 information is on slides. Slide show contains 1/2 required slides.</td><td data-points="4">Most information is on slides Slide sho contains 3/4 of required slides.</td><td data-points="5">All necessary information is on slides. Slideshow contains all required slides.</td></tr><tr class="row-2" data-row-points="0"><th scope="row">Mechanics</th><td data-points="1">There are 7 or more spelling, grammar, punctuation errors.</td><td data-points="2">There are 6 or less grammar, punctuation, spelling errors.</td><td data-points="3">There are four or less grammar, punctuation, spelling errors.</td><td data-points="4">There are two or less grammar, punctuation, spelling errors.</td><td data-points="5">There is one or less grammar, punctuation, spelling errors.</td></tr><tr class="row-3" data-row-points="0"><th scope="row">Graphics</th><td data-points="1">Student used graphics that violate copyright.</td><td data-points="2">Copyright free graphics were used but not cited properly, AND there were not enough of them.</td><td data-points="3">Copyright free graphics were used and properly cited, BUT there were not enough of them.</td><td data-points="4">Copyright free graphics were used but not cited properly</td><td data-points="5">Copyright free graphics were used and properly cited.</td></tr><tr class="row-4" data-row-points="0"><th scope="row">Language</th><td data-points="1">Student has not put information into their own words.</td><td data-points="2">Most information is not in students own words.</td><td data-points="3">Only 1/2 information is in students own words.</td><td data-points="4">most information is in a student\'s onw words.</td><td data-points="5">Necessary information is in student\'s own words.</td></tr><tr class="row-5" data-row-points="0"><th scope="row">Presentation</th><td data-points="1">Student does not use bullet points.</td><td data-points="2">Only 1/4 of the slides contain bullet points.</td><td data-points="3">Only 1/2 of the slides contains bullet points.</td><td data-points="4">Bullet points are used in most slides.</td><td data-points="5">Bullet points are ued instead of paragraphs of information.</td></tr><tr class="row-6" data-row-points="0"><th scope="row">Sources</th><td data-points="1">Sources and quotes are not cited.</td><td data-points="2">Most sources are not cited.</td><td data-points="3">Only 1/2 sources are cited and quotes are not cited.</td><td data-points="4">Most sources are cited. Quotes are not.</td><td data-points="5">Student cites sources and quotes.</td></tr></tbody><tfoot><tr><td colspan="6">POINT TOTAL</td><td><span id="totalPoints"></span>/30</td></tr></tfoot></table></div>';
+
+    var pagesArr = [scenePage, instructionsPage, outlinePage, rubricPage];
+    setWellContents();                       //initializes well to first slide
+    $( '#totalPoints' ).html(0);        //initialize total
+
+    $( '.next' ).click(function () {        //to next slide
+
+            navNum++;                       //increments nav page number
+
+
+            setWellContents();              //sets new slide to the well element
+
+    });
+
+    $( '.previous' ).click(function () {        //to previous slide
+
+        navNum--;                               //reduces nav page number
+
+        setWellContents();                      //sets new slide to the well element
+
+    }).hide();
+
+function setWellContents(contents) {            //optionall contents parameter for pagination
+
+    if(contents === undefined){                 //checks if contents not passed
+        $( '#well' ).html(pagesArr[navNum]);    //changes html to current array HTML
+    }else {                                     //if contents is passed in
+        $( '#well' ).html(contents);            //sets well to contents
+        for(var i = 0; i < pagesArr.length; i++) {  //sets appropriate navNum
+            if(pagesArr[i] == contents) {
+                navNum = i;
+            }
+        }
+    }
+    setNavNum();                            //calls NavNum
+}
+
+function setNavNum(){               //checks whether to hide or show previous/next buttons
+
+    $( '.previous' ).show();        //shows both
+    $( '.next' ).show();
+
+    if(navNum >= pagesArr.length - 1){          //if last page
+        navNum = pagesArr.length - 1;
+        $( '.next' ).hide();                      //hide 'next' button
+        initRubric();
+    }
+    if(navNum <= 0){                            //if first page
+        navNum = 0;
+        $( '.previous' ).hide();                  //hide 'previous' button
+    }
+
+}
+
+    if($( window ).width() > 450) {             //changes look of the pagination element based on window size
+                                                //runs on init
+        $( '.pagination-custom' ).addClass( 'pagination' );
+    }
+
+    $( window ).resize(function() {                     //changes look of the pagination element based on window size
+                                                    //runs on window resize
+        if($( window ).width() > 450) {
+            $( '.pagination-custom' ).addClass( 'pagination' );
+        }
+        if($( window ).width() <= 450) {
+            $( '.pagination-custom' ).removeClass( 'pagination' );
+        }
+    });
+
+  function initRubric() {                       //runs whenever slide is set to 'rubric'
+
+      $( 'tbody td' ).click(function(){         //adds click functions to every data table cell in body
+
+          if(!$(this).hasClass( 'active-table' )) {         //if cell is not currently selected
+
+              $( this ).parent().find( '*' ).removeClass( 'active-table' );         //set all row to not active
+              $( this ).addClass( 'active-table' );                                 //set this cell to active
+              $( this ).parent().attr( 'data-row-points', $( this ).attr( 'data-points' )); //sets corresponding point value to row
+
+
+          } else {                                                                  //if cell is currently selected
+
+              $( this ).parent().find( '*' ).removeClass( 'active-table' );         //remove selected from all column
+              $( this ).parent().attr( 'data-row-points', 0);                       //set point value of row to 0
+
+          }
+
+          $( '#fail' ).removeClass( 'active-table' );                               //make sure first column isn't active
+          recountTotal();                                                            //update total
+
+      });
+
+
+      $('#fail').click(function(){                                                  //had to add a new click for the 'did not complete assignment' row because it was only seen as in the 1st row
+
+          $( 'tbody td' ).removeClass( 'active-table' );                            //remove all select from EVERY row
+
+          $( this ).addClass( 'active-table' );                                     //set this box active
+
+          $( 'tbody tr' ).each(function(){                                          //sets all point values to zero
+
+              $( this ).attr( 'data-row-points', 0);                                // ^^^^^^^^
+          });
+          recountTotal();                                                           //update total
+      });
+    }
+
+    function recountTotal() {                                                       //update total function
+
+        var total = 0;                                                              //init new variable
+
+        $( 'tbody tr' ).each(function(){                                            //for each row in body
+
+           total += parseInt($(this).attr( 'data-row-points' ));                    //add value stored in the data-row-points attribute
+
+        });
+
+        $( '#totalPoints' ).html(total);                                            //push update to DOM
+
+        rubricPage = $( '#well' ).html();                                           //this added here because it has to be called every change to update the rubric page
+        pagesArr[3] = rubricPage;                                                   //pushes changes ^^^^^ to array
+    }
+
+</script>
+</html>
